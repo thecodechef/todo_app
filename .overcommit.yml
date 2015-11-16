@@ -15,10 +15,13 @@
 #
 # Uncomment the following lines to make the configuration take effect.
 
-#PreCommit:
-#  RuboCop:
-#    enabled: true
-#    on_warn: fail # Treat all warnings as failures
+PreCommit:
+  RuboCop:
+    enabled: true
+    on_warn: fail
+  SlimLint:
+    enabled: true
+    include: app/views/**/*.slim
 #
 #  TrailingWhitespace:
 #    exclude:
@@ -30,3 +33,8 @@
 #
 #  IndexTags:
 #    enabled: true # Generate a tags file with `ctags` each time HEAD changes
+
+PostCommit:
+  GitGuilt:
+    enabled: true
+    flags: ["-a", "HEAD"]
