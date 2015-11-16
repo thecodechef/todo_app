@@ -37,4 +37,4 @@ PreCommit:
 PostCommit:
   GitGuilt:
     enabled: true
-    flags: ["a", "HEAD"]
+    flags: ["HEAD~", "HEAD"]
