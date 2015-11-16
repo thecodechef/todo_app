@@ -1,0 +1,3 @@
+LineLength:
+  include: 'app/views/**/*.html.slim'
+  max: 1000
